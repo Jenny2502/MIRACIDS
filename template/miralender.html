@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miralander</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: xx-large;
+            color: rgb(255, 152, 248)2;
+            font-weight: 400;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        td:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles/miralender.css">
+</head>
+
+<body>
+    <nav class="nav-bar" data-animate-on-scroll>
+        <div class="navigation-objects">
+            <a class="about-us">About us</a>
+            <a class="calendar">Miralendar</a>
+            <img class="miracids-logo-icon" alt="" src="../assets/miracids-logo@3x.png">
+
+            <img class="vector-3-icon" alt="" src="../assets/vector-3.svg">
+
+            <div class="study-techniques-text">Pomodoro session</div>
+            <a class="mirabot">Mirabot</a>
+            <button class="login-button" autofocus data-animate-on-scroll>
+                <div class="login-text">Đăng Nhập</div>
+            </button>
+        </div>
+    </nav>
+    <table>
+        <caption>Miralendar</caption>
+        <!-- Table content will go here -->
+    </table>
+
+    <form id="eventForm">
+        <label for="eventDate">Date:</label>
+        <input type="date" id="eventDate" required>
+        <label for="eventTime">Time:</label>
+        <input type="time" id="eventTime" required>
+        <label for="eventDescription">Description:</label>
+        <input type="text" id="eventDescription" required>
+        <button type="submit">Add Event</button>
+    </form>
+
+    <div class="calendar_table">
+        <div class="timeline">
+            <div class="spacer"></div>
+            <div class="time-marker">9 AM</div>
+            <div class="time-marker">10 AM</div>
+            <div class="time-marker">11 AM</div>
+            <div class="time-marker">12 PM</div>
+            <div class="time-marker">1 PM</div>
+            <div class="time-marker">2 PM</div>
+            <div class="time-marker">3 PM</div>
+            <div class="time-marker">4 PM</div>
+            <div class="time-marker">5 PM</div>
+            <div class="time-marker">6 PM</div>
+        </div>
+        <div class="days">
+            <div class="day mon">
+                <div class="date">
+                    <p class="date-num">9</p>
+                    <p class="date-day">Mon</p>
+                </div>
+                <div class="events">
+                    <div class="event start-2 end-5 securities">
+                        <p class="title">Securities Regulation</p>
+                        <p class="time">2 PM - 5 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="day tues">
+                <div class="date">
+                    <p class="date-num">12</p>
+                    <p class="date-day">Tues</p>
+                </div>
+                <div class="events">
+                    <div class="event start-10 end-12 corp-fi">
+                        <p class="title">Corporate Finance</p>
+                        <p class="time">10 AM - 12 PM</p>
+                    </div>
+                    <div class="event start-1 end-4 ent-law">
+                        <p class="title">Entertainment Law</p>
+                        <p class="time">1PM - 4PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="day wed">
+                <div class="date">
+                    <p class="date-num">11</p>
+                    <p class="date-day">Wed</p>
+                </div>
+                <div class="events">
+                    <div class="event start-12 end-1 writing">
+                        <p class="title">Writing Seminar</p>
+                        <p class="time">11 AM - 12 PM</p>
+                    </div>
+                    <div class="event start-2 end-5 securities">
+                        <p class="title">Securities Regulation</p>
+                        <p class="time">2 PM - 5 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="day thurs">
+                <div class="date">
+                    <p class="date-num">12</p>
+                    <p class="date-day">Thurs</p>
+                </div>
+                <div class="events">
+                    <div class="event start-10 end-12 corp-fi">
+                        <p class="title">Corporate Finance</p>
+                        <p class="time">10 AM - 12 PM</p>
+                    </div>
+                    <div class="event start-1 end-4 ent-law">
+                        <p class="title">Entertainment Law</p>
+                        <p class="time">1PM - 4PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="day fri">
+                <div class="date">
+                    <p class="date-num">13</p>
+                    <p class="date-day">Fri</p>
+                </div>
+                <div class="events">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var scrollAnimElements = document.querySelectorAll('[data-animate-on-scroll]');
+        var observer = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                    const targetElement = entry.target;
+                    targetElement.classList.add("animate");
+                    observer.unobserve(targetElement);
+                }
+            }
+        }, {
+            threshold: 0.15,
+        });
+
+        for (let i = 0; i < scrollAnimElements.length; i++) {
+            observer.observe(scrollAnimElements[i]);
+        }
+    </script>
+
+    <script>
+        document.getElementById('eventForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form input values
+            const eventDate = document.getElementById('eventDate').value;
+            const eventTime = document.getElementById('eventTime').value;
+            const eventDescription = document.getElementById('eventDescription').value;
+
+            // Create an event object
+            const newEvent = {
+                date: eventDate,
+                time: eventTime,
+                description: eventDescription
+            };
+
+            // Add the event object to the calendar
+            addEventToCalendar(newEvent);
+
+            // Clear the form
+            event.target.reset();
+        });
+
+        function addEventToCalendar(event) {
+            // Your logic to add the event to the calendar
+        }
+
+    </script>
+</body>
+
+</html>
