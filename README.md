@@ -8,3 +8,5 @@
   1. Open project folder in [Visual Studio Code](https://code.visualstudio.com/download)
   2. In the terminal, run `yarn install`
   3. Run `yarn start` to view project in browser
+
+***Credit : Picture from [Pixels](https://www.pexels.com/)
