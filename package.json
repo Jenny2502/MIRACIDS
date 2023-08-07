@@ -1,8 +1,8 @@
 {
-  "name": "hkt-chatapp",
+  "name": "miracids",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +14,9 @@
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "lowdb": "1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jenny2502/MIRACIDS.git"
   }
 }

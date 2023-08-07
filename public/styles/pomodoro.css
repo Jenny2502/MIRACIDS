@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    height: 100vh;
+    color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+/*
+
+.about-us,
+.calendar {
+    text-decoration: none;
+    position: absolute;
+    top: 21px;
+    left: 578px;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    color: inherit;
+    display: inline-block;
+    width: 163px;
+    height: 23px;
+}
+
+.calendar {
+    top: 20px;
+    left: 212px;
+    width: 103px;
+}
+
+.miracids-logo-icon {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 156px;
+    height: 153px;
+    object-fit: cover;
+}
+
+.study-techniques-text {
+    top: 20px;
+    left: 362px;
+    font-weight: 500;
+    display: inline-block;
+    width: 169px;
+    height: 23px;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.login-text,
+.mirabot,
+.study-techniques-text {
+    position: absolute;
+    letter-spacing: -0.03em;
+}
+
+.mirabot {
+    text-decoration: none;
+    top: 19px;
+    left: 788px;
+    font-weight: 500;
+    color: var(--color-black);
+    text-align: center;
+}
+
+.login-text {
+    top: 9px;
+    left: 16.5px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    text-align: left;
+}
+
+.login-button {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--color-midnightblue);
+    position: absolute;
+    top: 13.5px;
+    left: 1352px;
+    border-radius: var(--br-3xs);
+    width: 105px;
+    height: 35px;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    background-color: var(--color-white);
+    width: 1471px;
+    height: 57.79px;
+}
+
+.header {
+    position: absolute;
+    top: calc(50% - 1678px);
+    left: calc(50% - 735.5px);
+    width: 1471px;
+    height: 734.66px;
+    text-align: left;
+    font-size: var(--font-size-xl);
+    color: var(--color-gray);
+    font-family: var(--font-inter);
+} */
+
+#pomodoro_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    z-index: -1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#timer {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#time {
+    position: relative;
+    align-items: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    letter-spacing: -0.25rem;
+    font-variant-numeric: tabular-nums;
+    justify-content: center;
+    align-items: center;
+    top: 250px;
+}
+
+.slection_btn {
+    position: relative;
+    align-items: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    letter-spacing: -0.25rem;
+    font-variant-numeric: tabular-nums;
+    justify-content: center;
+    align-items: center;
+    top: 250px;
+}
+
+.btn {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: -200px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 5px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pomodoro:hover {
+    background-color: white;
+    -webkit-text-fill-color: gray;
+}
+
+.longbreak:hover {
+    background-color: white;
+    -webkit-text-fill-color: gray;
+}
+
+.shortbreak:hover {
+    background-color: white;
+    -webkit-text-fill-color: gray;
+}
+
+.start {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    bottom: 100px;
+}
+
+.start_btn {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: grey;
+    padding: 5px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.start_btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-text-fill-color: white;
+}
+
+.settings_btn {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.settings_btn:hover {
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-text-fill-color: grey;
+}
+
+.replay {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    outline: 0;
+}
+
+.replay:hover {
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-text-fill-color: grey;
+}
+
+.replay:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

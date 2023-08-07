@@ -1,0 +1,12 @@
+{
+    "workbench.settings.openDefaultSettings": true,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": true,
+    "editor.minimap.autohide": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false
+}

@@ -33,8 +33,7 @@ app.get("/chat", async (req, res) => {
     },
     {
       headers: {
-        Authorization:
-          "Bearer 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",
+        Authorization:"Bearer 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"
       },
     }
   );
@@ -48,6 +47,11 @@ app.get("/miralender", (req, res) => {
 
 app.get("/chatbot", (req, res) => {
   res.sendFile(__dirname + "/public/chat.html");
+});
+
+// pomodoro
+app.get("/pomodoro", (req, res) => {
+  res.sendFile(__dirname + "/public/pomodoro.html");
 });
 
 // For calendar

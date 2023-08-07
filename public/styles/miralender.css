@@ -1,4 +1,48 @@
+body {
+  margin: 0;
+  line-height: normal;
+  font-family: system-ui, sans-serif;
+}
+
 :root {
+  /* fonts */
+  --font-inria-serif: "Inria Serif";
+  --font-inter: Inter;
+  --font-inherit: inherit;
+
+  /* font sizes */
+  --font-size-5xl: 24px;
+  --font-size-31xl: 50px;
+  --font-size-13xl: 32px;
+  --font-size-9xl: 28px;
+  --font-size-21xl: 40px;
+  --font-size-xl: 20px;
+  --font-size-lg: 18px;
+  --font-size-11xl: 30px;
+  --font-size-sm: 14px;
+
+  /* Colors */
+  --color-gray: #2c2c2c;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-midnightblue: #141f81;
+  --color-whitesmoke: #f0efef;
+  --color-silver: #bababa;
+  --color-gainsboro: #dcdcdc;
+
+  /* Paddings */
+  --padding-5xl: 24px;
+  --padding-10xs: 3px;
+  --padding-2xs: 11px;
+  --padding-8xl: 27px;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+  --br-6xl: 25px;
+  --br-xl: 20px;
+  --br-mini: 15px;
+  --br-5xl: 24px;
+  /*scheduler*/
   --numDays: 7;
   --numHours: 24;
   --timeHeight: 60px;
@@ -10,160 +54,119 @@
   --eventColor4: #d1ffe6;
 }
 
-body {
-  margin: 0;
-  line-height: normal;
-  font-family: system-ui, sans-serif;
-}
 
-
+.about-us,
 .calendar {
   text-decoration: none;
   position: absolute;
-  top: 20px;
-  left: 165px;
+  top: 21px;
+  left: 578px;
   letter-spacing: -0.03em;
   font-weight: 500;
   color: inherit;
-  text-align: left;
   display: inline-block;
+  width: 163px;
   height: 23px;
+}
+
+.calendar {
+  top: 20px;
+  left: 212px;
+  width: 103px;
 }
 
 .miracids-logo-icon {
   position: absolute;
   top: -50px;
-  left: 0px;
+  left: 0;
   width: 156px;
   height: 153px;
   object-fit: cover;
-  text-decoration: none;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-
-.vector-3-icon {
-  position: absolute;
-  top: 29.36px;
-  left: 547.36px;
-  width: 13.27px;
-  height: 7.91px;
 }
 
 .study-techniques-text {
-  position: absolute;
   top: 20px;
-  left: 360px;
-  letter-spacing: -0.03em;
+  left: 362px;
   font-weight: 500;
-  text-align: left;
   display: inline-block;
   width: 169px;
   height: 23px;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.login-text,
+.mirabot,
+.study-techniques-text {
+  position: absolute;
+  letter-spacing: -0.03em;
 }
 
 .mirabot {
   text-decoration: none;
-  position: absolute;
-  top: 20px;
-  left: 560px;
-  letter-spacing: -0.03em;
+  top: 19px;
+  left: 788px;
   font-weight: 500;
-  color: #000;
+  color: var(--color-black);
+  text-align: center;
 }
 
 .login-text {
-  position: relative;
-  font-size: 14px;
-  letter-spacing: -0.03em;
+  top: 9px;
+  left: 16.5px;
+  font-size: var(--font-size-sm);
   font-weight: 600;
-  font-family: Inter;
-  color: #fff;
+  font-family: var(--font-inter);
+  color: var(--color-white);
   text-align: left;
 }
 
 .login-button {
   cursor: pointer;
-  border: none;
-  padding: 8px 16px;
-  background-color: #141f81;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-midnightblue);
   position: absolute;
   top: 13.5px;
-  left: 1159px;
-  border-radius: 10px;
+  left: 1352px;
+  border-radius: var(--br-3xs);
   width: 105px;
   height: 35px;
-  display: flex;
-  /* flex-direction: column; */
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
 }
 
-.navigation-objects {
-  position: relative;
-  background-color: #fff;
+
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  background-color: var(--color-white);
   width: 1471px;
   height: 57.79px;
 }
 
-.nav-bar {
-  margin: 0;
-  position: relative;
-  background-color: #fff;
-  width: 100%;
-  height: 55.73px;
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  justify-content: flex-end;
-  opacity: 1;
-  text-align: center;
-  font-size: 20px;
-  color: #2c2c2c;
-  font-family: Inter;
+.header {
+  position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
+  width: 1471px;
+  height: 734.66px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-gray);
+  font-family: var(--font-inter);
+  zoom: 86%;
 }
 
-.nav-bar.animate {
-  animation: 1.5s ease-in 1s 1 normal forwards scale-up;
+table {
+  position: relative;
+  top: 60px;
 }
 
-@keyframes scale-up {
-  0% {
-    transform: scale(0.5);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .login-button {
-    opacity: 0;
-  }
-
-  .login-button.animate {
-    animation: 2.5s ease-in 1s 1 normal forwards fade-in-bottom;
-  }
-
-  @keyframes fade-in-bottom {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-}
 
 #eventForm {
+  position: relative;
+  top: 70px;
+  left: 0;
   margin-left: 2%;
 }
 
