@@ -9,4 +9,4 @@
   2. In the terminal, run `yarn install`
   3. Run `yarn start` to view project in browser
 
-***Credit : Picture from [Pixels](https://www.pexels.com/)
+***Credit : Picture from [Pixels](https://www.pexels.com/)***
